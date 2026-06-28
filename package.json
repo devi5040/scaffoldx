@@ -23,6 +23,8 @@
   ],
   "author": "Deviprasad Rai <dpraidola@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "ora": "^9.4.1"
+  }
 }
