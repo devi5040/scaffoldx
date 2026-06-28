@@ -23,6 +23,15 @@
   ],
   "author": "Deviprasad Rai <dpraidola@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "node": "^26.4.0",
+    "ora": "^9.4.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1"
+  }
 }
