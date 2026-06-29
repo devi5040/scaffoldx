@@ -4,6 +4,7 @@ import chalk from "chalk";
 import { Command } from "commander";
 import { generateCommand } from "./commands/generate";
 import { exportCommand } from "./commands/export";
+import { initCommand } from "./commands/init";
 
 const program = new Command();
 
@@ -63,3 +64,12 @@ program
       });
     },
   );
+
+//INIT
+program
+  .command("init")
+  .alias("i")
+  .description("Interactively build a JSON blueprint step by step")
+  .action(async () => {
+    await initCommand();
+  });
