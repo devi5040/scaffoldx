@@ -1,0 +1,52 @@
+{
+  "app": {
+    "(auth)": {
+      "login": {
+        "page.tsx": ""
+      },
+      "register": {
+        "page.tsx": ""
+      }
+    },
+    "(dashboard)": {
+      "layout.tsx": "",
+      "page.tsx": ""
+    },
+    "api": {
+      "auth": {
+        "[...nextauth]": {
+          "route.ts": ""
+        }
+      }
+    },
+    "layout.tsx": "",
+    "page.tsx": "",
+    "globals.css": ""
+  },
+  "components": {
+    "ui": {
+      "Button.tsx": "",
+      "Input.tsx": "",
+      "Modal.tsx": ""
+    },
+    "layout": {
+      "Navbar.tsx": "",
+      "Sidebar.tsx": "",
+      "Footer.tsx": ""
+    }
+  },
+  "lib": {
+    "utils.ts": "",
+    "auth.ts": "",
+    "db.ts": ""
+  },
+  "types": {
+    "index.ts": ""
+  },
+  "public": {
+    "favicon.ico": null
+  },
+  ".env.example": "NEXTAUTH_SECRET=\nNEXTAUTH_URL=http://localhost:3000\nDATABASE_URL=",
+  ".gitignore": "node_modules\n.next\n.env\n.env.local\n",
+  "next.config.js": "/** @type {import('next').NextConfig} */\nconst nextConfig = {}\n\nmodule.exports = nextConfig\n"
+}
