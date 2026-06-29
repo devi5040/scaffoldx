@@ -14,7 +14,7 @@ async function buildInteractive(): Promise<StructureNode> {
   const root: StructureNode = {};
   const queue: QueueItem[] = [{ node: root, currentPath: "/", label: "root" }];
 
-  console.log(chalk.bold.cyan("\n Scaffoldx Interactive Builder"));
+  console.log(chalk.bold.cyan("\n Scaffinity Interactive Builder"));
   console.log(chalk.dim("Build your project structure step by step.\n"));
   console.log(
     chalk.dim("Commands: add file -> type name with extension (e.g. index.ts)"),
@@ -119,7 +119,7 @@ export async function initCommand(): Promise<void> {
       );
       console.log(
         chalk.dim(
-          `\nRun: scaffoldx generate ${outputFile} to create your structure\n`,
+          `\nRun: Scaffinity generate ${outputFile} to create your structure\n`,
         ),
       );
     }

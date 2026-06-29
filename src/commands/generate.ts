@@ -112,7 +112,7 @@ export async function generateCommand(
     await processNode(structre, outputDir, result, options);
 
     // Summary
-    console.log("\n" + chalk.bold("Scaffoldx summary"));
+    console.log("\n" + chalk.bold("Scaffinity summary"));
     console.log(chalk.dim("-".repeat(40)));
     console.log(
       chalk.green(`  ✓ Created : ${result.created.length} files/dirs`),

@@ -1,10 +1,10 @@
-# ⚡ ScaffoldX
+# ⚡ Scaffinity
 
 > Generate, export, and share project structures as portable JSON blueprints — with a single command.
 
-[![npm version](https://img.shields.io/npm/v/scaffoldx.svg)](https://www.npmjs.com/package/scaffoldx)
+[![npm version](https://img.shields.io/npm/v/scaffinity.svg)](https://www.npmjs.com/package/scaffinity)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/devi5040/scaffoldx/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/devi5040/scaffinity/pulls)
 
 ---
 
@@ -12,14 +12,14 @@
 
 Every new project starts the same way — manually creating folders, files, config boilerplate. You either do it by hand each time or maintain a growing list of templates nobody on your team can find.
 
-**ScaffoldX fixes this.** Define your entire project structure in a single JSON file. Generate it anywhere. Share it with anyone.
+**Scaffinity fixes this.** Define your entire project structure in a single JSON file. Generate it anywhere. Share it with anyone.
 
 ---
 
 ## Install
 
 ```bash
-npm install -g scaffoldx
+npm install -g scaffinity
 ```
 
 ---
@@ -29,22 +29,22 @@ npm install -g scaffoldx
 ### 1. `generate` — JSON blueprint → real project
 
 ```bash
-scaffoldx generate blueprint.json
-scaffoldx generate blueprint.json -o ./my-new-project
-scaffoldx generate blueprint.json --dry --verbose   # preview first
+scaffinity generate blueprint.json
+scaffinity generate blueprint.json -o ./my-new-project
+scaffinity generate blueprint.json --dry --verbose   # preview first
 ```
 
 ### 2. `export` — existing project → JSON blueprint
 
 ```bash
-scaffoldx export ./my-project -o blueprint.json
-scaffoldx export . --ignore dist coverage --depth 4
+scaffinity export ./my-project -o blueprint.json
+scaffinity export . --ignore dist coverage --depth 4
 ```
 
 ### 3. `init` — build a blueprint interactively
 
 ```bash
-scaffoldx init
+scaffinity init
 ```
 
 ---
@@ -83,10 +83,10 @@ Files with string values get that content written directly. `null` creates an em
 
 ```bash
 # Download the community blueprint
-curl -O https://raw.githubusercontent.com/devi5040/scaffoldx/main/examples/express-ts-api.json
+curl -O https://raw.githubusercontent.com/devi5040/scaffinity/main/examples/express-ts-api.json
 
 # Generate the project
-scaffoldx generate express-ts-api.json -o ./my-api
+scaffinity generate express-ts-api.json -o ./my-api
 ```
 
 Output:
@@ -101,7 +101,7 @@ Output:
   create: my-api/src/modules/auth/auth.service.ts
   ...
 
-📦 ScaffoldX Summary
+📦 Scaffinity Summary
 ────────────────────────────────────────
   ✓ Created : 25 files/dirs
 ────────────────────────────────────────
@@ -112,7 +112,7 @@ Output:
 **Export your current project as a shareable blueprint:**
 
 ```bash
-scaffoldx export ./my-project -o team-blueprint.json
+scaffinity export ./my-project -o team-blueprint.json
 # Share team-blueprint.json with your team — they run one command to replicate your structure
 ```
 
@@ -154,7 +154,7 @@ Ready-made blueprints in the [`/examples`](./examples) folder:
 ## Programmatic Usage
 
 ```typescript
-import { generateCommand, exportCommand } from "scaffoldx";
+import { generateCommand, exportCommand } from "scaffinity";
 
 // Generate from a blueprint object directly
 await generateCommand("blueprint.json", {
@@ -171,16 +171,16 @@ await exportCommand("./existing-project", {
 
 ---
 
-## Why ScaffoldX over Yeoman / degit / framework CLIs?
+## Why Scaffinity over Yeoman / degit / framework CLIs?
 
-|                         | ScaffoldX | Yeoman | degit | Framework CLIs |
-| ----------------------- | --------- | ------ | ----- | -------------- |
-| Language agnostic       | ✅        | ✅     | ✅    | ❌             |
-| Portable JSON format    | ✅        | ❌     | ❌    | ❌             |
-| Export existing project | ✅        | ❌     | ❌    | ❌             |
-| Zero config             | ✅        | ❌     | ✅    | ✅             |
-| File content support    | ✅        | ✅     | ✅    | ✅             |
-| Shareable blueprint     | ✅        | ❌     | ✅    | ❌             |
+|                         | Scaffinity | Yeoman | degit | Framework CLIs |
+| ----------------------- | ---------- | ------ | ----- | -------------- |
+| Language agnostic       | ✅         | ✅     | ✅    | ❌             |
+| Portable JSON format    | ✅         | ❌     | ❌    | ❌             |
+| Export existing project | ✅         | ❌     | ❌    | ❌             |
+| Zero config             | ✅         | ❌     | ✅    | ✅             |
+| File content support    | ✅         | ✅     | ✅    | ✅             |
+| Shareable blueprint     | ✅         | ❌     | ✅    | ❌             |
 
 ---
 
@@ -189,8 +189,8 @@ await exportCommand("./existing-project", {
 PRs are welcome. To add a community blueprint, add a JSON file to `/examples` and open a PR.
 
 ```bash
-git clone https://github.com/devi5040/scaffoldx
-cd scaffoldx
+git clone https://github.com/devi5040/scaffinity
+cd scaffinity
 npm install
 npm run dev -- generate examples/express-ts-api.json --dry --verbose
 ```

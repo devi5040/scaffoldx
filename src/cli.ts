@@ -9,12 +9,12 @@ import { initCommand } from "./commands/init";
 const program = new Command();
 
 console.log(
-  chalk.bold.cyan("\n ScaffoldX") +
+  chalk.bold.cyan("\n Scaffinity") +
     chalk.dim(" - Project structure generator\n"),
 );
 
 program
-  .name("scaffoldx")
+  .name("scaffinity")
   .description(
     "Generate, export, and share project structures as portable JSON blueprints",
   )
@@ -79,10 +79,10 @@ program.addHelpText(
   "after",
   `
     ${chalk.bold("Examples:")}
-    ${chalk.cyan("scaffoldx generate blueprint.json")}          Generate from blueprint
-    ${chalk.cyan("scaffoldx generate blueprint.json -o ./app")} Generate into specific folder
-    ${chalk.cyan("scaffoldx export ./my-project -o out.json")}  Export existing project
-    ${chalk.cyan("scaffoldx init")}                             Interactive builder
+    ${chalk.cyan("scaffinity generate blueprint.json")}          Generate from blueprint
+    ${chalk.cyan("scaffinity generate blueprint.json -o ./app")} Generate into specific folder
+    ${chalk.cyan("scaffinity export ./my-project -o out.json")}  Export existing project
+    ${chalk.cyan("scaffinity init")}                             Interactive builder
     
     ${chalk.bold("Blueprint format:")}
     ${chalk.dim("{")}
@@ -95,7 +95,7 @@ program.addHelpText(
     ${chalk.dim(' "env.example":"PORT=3000\\nNODE_ENV=development"')}
     ${chalk.dim("}")}
     
-    ${chalk.dim("Github: https://github.com/devi5040/scaffoldx")}`,
+    ${chalk.dim("Github: https://github.com/devi5040/scaffinity")}`,
 );
 
 program.parse(process.argv);

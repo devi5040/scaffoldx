@@ -13,7 +13,7 @@
     "start": "node dist/cli.js"
   },
   "keywords": [
-    "scaffold",
+    "scaffinity",
     "cli",
     "boilerplate",
     "project-structure",
