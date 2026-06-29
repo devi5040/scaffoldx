@@ -73,3 +73,31 @@ program
   .action(async () => {
     await initCommand();
   });
+
+// HELP EXAMPLES
+program.addHelpText(
+  "after",
+  `
+    ${chalk.bold("Examples:")}
+    ${chalk.cyan("scaffoldx generate blueprint.json")}          Generate from blueprint
+    ${chalk.cyan("scaffoldx generate blueprint.json -o ./app")} Generate into specific folder
+    ${chalk.cyan("scaffoldx export ./my-project -o out.json")}  Export existing project
+    ${chalk.cyan("scaffoldx init")}                             Interactive builder
+    
+    ${chalk.bold("Blueprint format:")}
+    ${chalk.dim("{")}
+    ${chalk.dim('   "src": {')}
+    ${chalk.dim('       "index.ts":"",')}
+    ${chalk.dim('       "utils":{')}
+    ${chalk.dim('           "helper.ts":"// Your content here"')}
+    ${chalk.dim("       }")}
+    ${chalk.dim("   },")}
+    ${chalk.dim(' "env.example":"PORT=3000\\nNODE_ENV=development"')}
+    ${chalk.dim("}")}
+    
+    ${chalk.dim("Github: https://github.com/devi5040/scaffoldx")}`,
+);
+
+program.parse(process.argv);
+
+if (!process.argv.slice(2).length) program.outputHelp;
