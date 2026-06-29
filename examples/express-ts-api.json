@@ -1,0 +1,45 @@
+{
+  "src": {
+    "modules": {
+      "auth": {
+        "auth.controller.ts": "",
+        "auth.service.ts": "",
+        "auth.routes.ts": "",
+        "auth.types.ts": ""
+      },
+      "user": {
+        "user.controller.ts": "",
+        "user.service.ts": "",
+        "user.routes.ts": "",
+        "user.types.ts": ""
+      }
+    },
+    "middleware": {
+      "auth.middleware.ts": "",
+      "error.middleware.ts": "",
+      "validate.middleware.ts": ""
+    },
+    "utils": {
+      "logger.ts": "",
+      "response.ts": "",
+      "constants.ts": ""
+    },
+    "config": {
+      "db.ts": "",
+      "env.ts": ""
+    },
+    "types": {
+      "index.ts": ""
+    },
+    "main.ts": "import express from 'express'\n\nconst app = express()\nconst PORT = process.env.PORT || 3000\n\napp.use(express.json())\n\napp.listen(PORT, () => {\n  console.log(`Server running on port ${PORT}`)\n})\n\nexport default app\n"
+  },
+  "tests": {
+    "auth.test.ts": "",
+    "user.test.ts": ""
+  },
+  ".env.example": "PORT=3000\nNODE_ENV=development\nDB_URL=\nJWT_SECRET=",
+  ".gitignore": "node_modules\ndist\n.env\ncoverage\n",
+  "package.json": "{\n  \"name\": \"my-api\",\n  \"version\": \"1.0.0\",\n  \"scripts\": {\n    \"dev\": \"tsx watch src/main.ts\",\n    \"build\": \"tsc\",\n    \"start\": \"node dist/main.js\"\n  }\n}\n",
+  "tsconfig.json": "{\n  \"compilerOptions\": {\n    \"target\": \"ES2020\",\n    \"module\": \"commonjs\",\n    \"outDir\": \"dist\",\n    \"rootDir\": \"src\",\n    \"strict\": true,\n    \"esModuleInterop\": true\n  }\n}\n",
+  "README.md": "# My API\n\nGenerated with [ScaffoldX](https://github.com/devi5040/scaffoldx)\n"
+}
