@@ -76,7 +76,10 @@ export async function generateCommand(
   jsonFile: string,
   options: GenerateOptions,
 ): Promise<void> {
-  const spinner = ora("Reading blueprint...").start();
+  const spinner = ora({
+    text: "Reading blueprint...",
+    stream: process.stdout,
+  }).start();
 
   try {
     const absoluteJson = path.resolve(process.cwd(), jsonFile);
